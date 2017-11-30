@@ -81,6 +81,8 @@ def main():
     draw_many_squares(turtle, 3, 75, 15)
     turtle3()
     try_methods()
+    try_functions()
+    try_methods_and_functions()
 
     # When the TODOs ask you to test YOUR code, put YOUR tests here:
 
@@ -187,8 +189,8 @@ def try_methods():
 
 def try_functions():
     jump_and_move_turtle(200, 100, 300, 30)
-
-
+    jump_and_move_turtle(100, 200, 0, 0)
+    jump_and_move_turtle(-50, 50, 100, 100)
 
     """
     Causes several SimpleTurtles to do the following:
@@ -197,7 +199,7 @@ def try_functions():
      -- One jumps to (-50, 50), then moves (while drawing) to (100, 100)
     """
     ####################################################################
-    # TODO: 4. Implement this function, per its doc-string above.
+    # DONE: 4. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
@@ -211,18 +213,24 @@ def try_functions():
 
 
 def try_methods_and_functions():
-    burn = rg.SimpleTurtle()
-    burn.pen = rg.Pen('blue', 5)
-    burn.backward(150)
-    burn.speed = 1
-    burn.draw_square(100)
-    burn.left(30)
-    burn.draw_square(100)
-    burn.speed = 5
-    burn._update_real_turtle(burn)
-    burn.draw_square(50)
-    burn.left(15)
-    burn.clone()
+    blue = rg.SimpleTurtle()
+    blue.pen = rg.Pen('blue', 5)
+    blue.backward(150)
+    blue.speed = 1
+    draw_many_squares(blue,2, 100, 30)
+
+    blue.speed = 5
+    blue.pen = rg.Pen('red', 5)
+    draw_many_squares(blue,10, 50, 15)
+    blue.speed = 100
+    blue.pen = rg.Pen('red', 35)
+    draw_many_squares(blue,8,300,60)
+    blue.pen = rg.Pen('black',3)
+    blue.backward(200)
+    blue.draw_circle(30)
+    blue.draw_square(50)
+
+
 
     """
     Constructs a SimpleTurtle and sets its   pen  to a new rg.Pen
@@ -256,7 +264,7 @@ def try_methods_and_functions():
       8. Draw a SQUARE whose sides are each of length 50.
     """
     ####################################################################
-    # TODO: 5. Implement this function, per its doc-string above.
+    # DONE: 5. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).  IMPORTANT, IMPORTANT, IMPORTANT:
     #    Keep reading the rest of this TO DO before doing the above!
