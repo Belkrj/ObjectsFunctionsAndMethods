@@ -163,6 +163,12 @@ def turtle3():
 
 
 def try_methods():
+    ben = rg.SimpleTurtle()
+    ben.pen = rg.Pen('brown', 5)
+    ben.forward(150)
+    ben.left(90)
+    ben.forward(50)
+    ben.backward(100)
     """
     Constructs a SimpleTurtle and sets its   pen   to a new rg.Pen
     that is 'brown' with thickness 5.
@@ -173,13 +179,17 @@ def try_methods():
       -- backward  100 units
     """
     ####################################################################
-    # TODO: 3. Implement this function, per its doc-string above.
+    # DONE: 3. Implement this function, per its doc-string above.
     #    Put a statement in   main   to test this function
     #    (by calling this function).
     ####################################################################
 
 
 def try_functions():
+    jump_and_move_turtle(200, 100, 300, 30)
+
+
+
     """
     Causes several SimpleTurtles to do the following:
      -- One jumps to (200, 100), then moves (while drawing) to (300, 30)
@@ -201,6 +211,19 @@ def try_functions():
 
 
 def try_methods_and_functions():
+    burn = rg.SimpleTurtle()
+    burn.pen = rg.Pen('blue', 5)
+    burn.backward(150)
+    burn.speed = 1
+    burn.draw_square(100)
+    burn.left(30)
+    burn.draw_square(100)
+    burn.speed = 5
+    burn._update_real_turtle(burn)
+    burn.draw_square(50)
+    burn.left(15)
+    burn.clone()
+
     """
     Constructs a SimpleTurtle and sets its   pen  to a new rg.Pen
     that is 'blue' with thickness 5.
